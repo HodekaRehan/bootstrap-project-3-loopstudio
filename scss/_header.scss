@@ -1,0 +1,143 @@
+header{
+    background: url(../images/desktop/image-hero.jpg) center/cover no-repeat;
+    min-height: 100vh;
+    
+
+    @include for-tablet-landscape-up{
+        min-height: 650px;
+    }
+}
+
+.logo{
+    max-width: 11rem;
+
+    @include for-tablet-portrait-up{
+        max-width: 11.25rem;
+    }
+
+    @include for-desktop-up{
+        max-width: 11.875rem;
+    }
+}
+
+//hamburger 
+.navbar-toggler{
+
+    &:focus{
+        outline: unset;
+        box-shadow: none;
+    }
+
+    .bar{
+        display: block;
+        width: 30px;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+        background-color: $White;
+
+
+        &:not(:last-child){
+            margin-bottom: 5px;
+        }
+    }
+
+    &.open .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    &.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.open .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.navbar{
+    transition: 0.3s;
+    z-index: 5;
+
+    &.open{
+        background-color: $Black;
+
+        @include for-tablet-landscape-up{
+            background-color: transparent;
+        }
+    }
+}
+
+.navbar-nav{
+    min-height: calc(100vh - 75.28px);
+
+
+    @include for-tablet-landscape-up{
+        min-height: unset;
+    }
+
+    .nav-item{
+
+        &:not(:last-child){
+
+            @include for-tablet-landscape-up{
+                margin-right: 2rem;
+            }
+        }
+
+    }
+
+
+    .nav-link{
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        @include for-tablet-landscape-up{
+            font-size: 1.25rem;
+            text-transform: capitalize;
+        }
+
+        &:hover{
+            text-decoration: underline;
+
+            @include for-tablet-landscape-up{
+                text-decoration: none;
+
+                &::after{
+                    content: "";
+                    width: 2rem;
+                    height: 2px;
+                    background-color: $White;
+                    display: block;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+
+
+.banner{
+    z-index: 1;
+
+    h1{
+        min-width: fit-content;
+        font-size: 2.5rem;
+        border: 2px solid $White;
+        padding: 1rem;
+
+        @include for-tablet-portrait-up{
+            font-size: 2.75rem;
+            padding: 1.5rem;
+        }
+
+        @include for-tablet-landscape-up{
+            font-size: 3rem;
+            padding: 1.75rem;
+        }
+
+        @include for-desktop-up{
+            font-size: 3.5rem;
+            padding: 2rem;
+        }
+    }
+}

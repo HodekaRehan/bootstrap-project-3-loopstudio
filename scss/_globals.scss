@@ -1,0 +1,22 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: $alata-400;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.nav-link, h1{
+    font-family: $josefin-sans-300;
+    font-weight: 300;
+}

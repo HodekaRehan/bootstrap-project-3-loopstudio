@@ -1,0 +1,21 @@
+footer{
+    background-color: $Black;
+    padding: 4.5rem 0 2.5rem 0;
+
+}
+
+.footer-links{
+    a{
+        &:hover{
+            @include for-link-hover;
+        }
+    }
+}
+
+.social-links{
+    i:hover{
+        color: $Dark-Gray;
+    }
+}
+
+

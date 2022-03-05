@@ -17,3 +17,8 @@ function mobileMenu() {
         navbar.classList.add('open');
     }
 }
+
+// date
+const date = document.querySelector('#date');
+
+date.innerHTML = new Date().getFullYear();

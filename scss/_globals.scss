@@ -16,7 +16,20 @@ body{
     overflow-x: hidden;
 }
 
-.nav-link, h1{
+.nav-link, h1, h2, h3{
     font-family: $josefin-sans-300;
     font-weight: 300;
+}
+
+li{
+    list-style: none;
+    
+    
+}
+
+ul{
+    padding: 0;
+}
+a{
+    text-decoration: none;
 }

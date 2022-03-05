@@ -102,14 +102,15 @@ header{
             @include for-tablet-landscape-up{
                 text-decoration: none;
 
-                &::after{
-                    content: "";
-                    width: 2rem;
-                    height: 2px;
-                    background-color: $White;
-                    display: block;
-                    margin: auto;
-                }
+                @include for-link-hover;
+                // &::after{
+                //     content: "";
+                //     width: 2rem;
+                //     height: 2px;
+                //     background-color: $White;
+                //     display: block;
+                //     margin: auto;
+                // }
             }
         }
     }

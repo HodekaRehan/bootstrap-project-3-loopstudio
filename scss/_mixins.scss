@@ -25,3 +25,26 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin for-button{
+    border-radius: 0;
+    border: 2px solid black ;
+    color: $Black;
+    letter-spacing: 2px;
+        
+    &:hover{
+        background-color: $Black;
+        color: $White;
+    }
+}
+
+@mixin for-link-hover{
+    &::after{
+        content: "";
+        width: 2rem;
+        height: 2px;
+        background-color: $White;
+        display: block;
+        margin: auto;
+    }
+}
